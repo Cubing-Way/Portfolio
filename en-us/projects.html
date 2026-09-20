@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Projects</h1>
+        <p>A collection of applications and experiments I've built.</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main>
+
+        <div class="projects-wrapper">
+
+            <div class="project-selector">
+
+                <label for="projects">Select a project:</label>
+
+                <select id="projects">
+                    <option value="pro-timer">Pro Timer</option>
+                    <option value="cubisz">Cubisz</option>
+                    <option value="easy-score">Easy Score</option>
+                    <option value="mixed-units-calculator">
+                        Mixed Units Calculator
+                    </option>
+                    <option value="fifteen-puzzle">
+                        15-Puzzle Simulator
+                    </option>
+                </select>
+
+            </div>
+
+
+            <!-- Pro Timer -->
+
+            <div id="pro-timer" class="project">
+
+                <h1>Pro Timer</h1>
+
+                <img
+                    src="../Protimer home.jpg"
+                    alt="Screenshot of Pro Timer"
+                >
+
+                <p>
+                    Pro Timer is a speedcubing timer designed to make
+                    competition-style practice possible without requiring
+                    extensive setup or manual management.
+                </p>
+
+                <h2>The Main Idea</h2>
+
+                <p>
+                    The main design idea came from an accidental
+                    implementation. While developing the timer, I initially
+                    implemented averages of 5 incorrectly, calculating them
+                    in fixed blocks instead of using the usual rolling
+                    average of the last five resolutions.
+                </p>
+
+                <p>
+                    I realized that this behavior could actually create an
+                    interesting competition-like experience, and it became
+                    the foundation of Pro Timer's average system.
+                </p>
+
+                <h2>Features</h2>
+
+                <ul>
+                    <li>Sessions and solve management</li>
+                    <li>Detailed solve and average statistics</li>
+                    <li>Scrambles and subsets</li>
+                    <li>Non-rolling block-based averages</li>
+                    <li>Blindfolded solving functionality</li>
+                    <li>Fewest Moves Challenge functionality</li>
+                    <li>TPS calculators</li>
+                    <li>Daily and all-time statistics</li>
+                </ul>
+
+                <h2>Development</h2>
+
+                <p>
+                    One of the biggest challenges was state management.
+                    With sessions, resolutions, statistics, settings,
+                    event-specific behavior, and other interconnected
+                    features, keeping the application's state consistent
+                    became one of the most difficult parts of the project.
+                </p>
+
+                <h2>Current Status</h2>
+
+                <p>
+                    Pro Timer is my most developed and polished project so
+                    far. It is fully usable and most of its intended
+                    functionality is implemented, although the project is
+                    not completely finished.
+                </p>
+
+                <p>
+                    GitHub:
+                    <a href="https://github.com/Cubing-Way/Pro-timer">
+                        Pro Timer on GitHub
+                    </a>
+                </p>
+
+                <p>
+                    App:
+                    <a href="https://cubing-way.github.io/Pro-timer/">
+                        Open Pro Timer
+                    </a>
+                </p>
+
+            </div>
+
+
+            <!-- Cubisz -->
+
+            <div id="cubisz" class="project">
+
+                <h1>Cubisz</h1>
+
+                <img
+                    src="../cubisz home.jpg"
+                    alt="Screenshot of Cubisz"
+                >
+
+                <p>
+                    Cubisz is a Rubik's Cube simulation and visualization
+                    library originally created to provide a better scramble
+                    display for Pro Timer.
+                </p>
+
+                <h2>The Idea</h2>
+
+                <p>
+                    The original goal was to create a reliable way to display
+                    scrambles. During development, the project grew into
+                    something more general: a digital Rubik's Cube that can
+                    be represented, manipulated, and analyzed by other
+                    applications.
+                </p>
+
+                <p>
+                    Cubisz is currently used by Pro Timer for scramble
+                    visualization, move-count and solution checking, TPS
+                    calculation, and FMC functionality.
+                </p>
+
+                <h2>Current Features</h2>
+
+                <ul>
+                    <li>2×2 cube simulation and visualization</li>
+                    <li>3×3 cube simulation and visualization</li>
+                    <li>2D cube planification</li>
+                    <li>3D cube visualization</li>
+                    <li>Cube movement and sticker state management</li>
+                    <li>Move-count and solution checking</li>
+                    <li>TPS calculation support</li>
+                    <li>Reusable functions for other projects</li>
+                </ul>
+
+                <h2>Development</h2>
+
+                <p>
+                    One of the hardest parts was getting the sticker swapping
+                    caused by cube movements correct while preserving the
+                    actual state of the cube.
+                </p>
+
+                <h2>Current Status</h2>
+
+                <p>
+                    Cubisz currently supports 2×2 and 3×3 cubes and can
+                    display them as a 2D planification or as a 3D
+                    representation.
+                </p>
+
+                <p>
+                    Scramble generation is not implemented yet, but the
+                    simulation and visualization foundation is already
+                    available for future applications.
+                </p>
+
+                <p>
+                    GitHub:
+                    <a href="https://github.com/Cubing-Way/cubisz">
+                        Cubisz on GitHub
+                    </a>
+                </p>
+
+                <p>App: None yet</p>
+
+            </div>
+
+
+            <!-- Easy Score -->
+
+            <div id="easy-score" class="project">
+
+                <h1>Easy Score</h1>
+
+                <img
+                    src="../easyscore home.jpg"
+                    alt="Screenshot of Easy Score"
+                >
+
+                <p>
+                    Easy Score is a sheet music editor designed around a
+                    simple idea: creating music notation should not require
+                    learning a complicated music application first.
+                </p>
+
+                <h2>The Idea</h2>
+
+                <p>
+                    I wanted to write sheet music, but found existing music
+                    notation applications difficult to learn. I wanted to
+                    create something where basic musical knowledge and an
+                    intuitive interface would be enough to start turning
+                    ideas into sheet music.
+                </p>
+
+                <p>
+                    Instead of relying heavily on conventions from existing
+                    notation software, I looked at applications such as word
+                    processors, video editors, and image editors for
+                    interaction ideas that users already understand.
+                </p>
+
+                <h2>Current Features</h2>
+
+                <ul>
+                    <li>Stave management</li>
+                    <li>Creating and managing bars</li>
+                    <li>Clef, time signature, and key signature management</li>
+                    <li>Text-based note input</li>
+                    <li>Saving and managing application state</li>
+                    <li>Playing generated scores</li>
+                    <li>Mouse-based note input in development</li>
+                </ul>
+
+                <h2>Development</h2>
+
+                <p>
+                    Easy Score is my most complex project so far. Managing
+                    application initialization and restoring its state has
+                    been one of the biggest technical challenges.
+                </p>
+
+                <p>
+                    Mouse-based note input is another ongoing challenge,
+                    since the user's position and interaction need to be
+                    translated into the correct musical notation.
+                </p>
+
+                <h2>Current Status</h2>
+
+                <p>
+                    Easy Score currently supports basic sheet music writing
+                    using text-based note input. Users can create the staves
+                    they need, write music on them, and play back the
+                    resulting score.
+                </p>
+
+                <p>
+                    The project is still under development. Not all sheet
+                    music symbols are supported yet, and mouse-based note
+                    input is still being developed.
+                </p>
+
+                <p>
+                    GitHub:
+                    <a href="https://github.com/Cubing-Way/Easy-Score">
+                        Easy Score on GitHub
+                    </a>
+                </p>
+
+                <p>App: None yet</p>
+
+            </div>
+
+
+            <!-- Mixed Units Calculator -->
+
+            <div id="mixed-units-calculator" class="project">
+
+                <h1>Mixed Units Calculator</h1>
+
+                <img
+                    src="../timeCalclator.jpg"
+                    alt="Screenshot of Mixed Units Calculator"
+                >
+
+                <p>
+                    Mixed Units Calculator is designed to make calculations
+                    involving multiple units more intuitive.
+                </p>
+
+                <h2>The Idea</h2>
+
+                <p>
+                    The idea came from a situation at a Rubik's Cube
+                    competition. There was a cumulative time limit of ten
+                    minutes, and I needed to subtract completed solve times
+                    from that limit while working with minutes, seconds, and
+                    milliseconds together.
+                </p>
+
+                <p>
+                    This made me realize that mixed-unit calculations can be
+                    unnecessarily difficult when a calculator expects
+                    everything to be converted into one unit first.
+                </p>
+
+                <h2>The Concept</h2>
+
+                <p>
+                    The goal is to let users enter and receive values in the
+                    units that make sense to them while the application
+                    handles the conversions internally.
+                </p>
+
+                <h2>Current Features</h2>
+
+                <ul>
+                    <li>Mixed-unit input</li>
+                    <li>Mixed-unit output</li>
+                    <li>Hours, minutes, and seconds calculated together</li>
+                    <li>Automatic conversion between units</li>
+                </ul>
+
+                <h2>Current Status</h2>
+
+                <p>
+                    The project is currently an early proof of concept.
+                    The existing prototype demonstrates the core idea by
+                    allowing hours, minutes, and seconds to be entered and
+                    calculated together.
+                </p>
+
+                <p>
+                    GitHub:
+                    <a href="https://github.com/Cubing-Way/Time-Calculator">
+                        Mixed Units Calculator on GitHub
+                    </a>
+                </p>
+
+                <p>App: None yet</p>
+
+            </div>
+
+
+            <!-- 15-Puzzle Simulator -->
+
+            <div id="fifteen-puzzle" class="project">
+
+                <img
+                    src="../15ouzzle.jpg"
+                    alt="Screenshot of the 15-Puzzle Simulator"
+                >
+
+                <h1>15-Puzzle Simulator</h1>
+
+                <p>
+                    The 15-Puzzle Simulator is a modern sliding-puzzle
+                    simulator designed to make larger puzzles enjoyable
+                    to practice and explore.
+                </p>
+
+                <h2>The Idea</h2>
+
+                <p>
+                    I received a 15-puzzle as a competition participation
+                    gift. After trying it, I became interested in solving
+                    it and even developed my own method for it.
+                </p>
+
+                <p>
+                    I wanted to try larger sliding puzzles, so I looked for
+                    simulators online. The available options did not provide
+                    the combination of visual design, modern layout,
+                    scrambling, and overall functionality that I wanted.
+                </p>
+
+                <h2>Current Features</h2>
+
+                <ul>
+                    <li>Sliding-puzzle simulation from 3×3 to 10×10</li>
+                    <li>Customizable visual themes</li>
+                    <li>Modern interface and layout</li>
+                    <li>Puzzle scrambling</li>
+                    <li>Move counter</li>
+                    <li>Timer</li>
+                    <li>Customization options</li>
+                </ul>
+
+                <h2>Development</h2>
+
+                <p>
+                    One of the main technical challenges was moving and
+                    swapping puzzle pieces without breaking the DOM
+                    structure.
+                </p>
+
+                <p>
+                    The project also required careful layout management so
+                    that different puzzle sizes could remain usable within
+                    the interface.
+                </p>
+
+                <h2>What I Focused On</h2>
+
+                <p>
+                    The parts I am most proud of are the styling and
+                    scrambling system. I wanted the simulator to feel like
+                    a modern application rather than simply displaying a
+                    puzzle grid on a page.
+                </p>
+
+                <h2>Current Status</h2>
+
+                <p>
+                    The simulator is close to being finished and is intended
+                    to become my first publicly available application outside
+                    of projects hosted through GitHub Pages.
+                </p>
+
+                <p>
+                    In the future, I want to integrate Cubisz and expand
+                    the project into a more complete puzzle simulator.
+                </p>
+
+                <p>
+                    GitHub:
+                    <a href="#">
+                        Coming soon
+                    </a>
+                </p>
+
+                <p>
+                    App:
+                    <a>
+                        Coming soon
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
