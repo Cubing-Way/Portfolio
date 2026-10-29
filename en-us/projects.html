@@ -138,38 +138,45 @@
                 >
 
                 <p>
-                    Cubisz is a Rubik's Cube simulation and visualization
-                    library originally created to provide a better scramble
-                    display for Pro Timer.
+                    Cubisz is a solve review app for the Rubik's Cube.
+                    You paste a scramble and your solution, and it replays
+                    the solve on a 3D cube, compares each step with what an
+                    engine would do from the same position, and suggests a
+                    fingertrick for every move.
                 </p>
 
                 <h2>The Idea</h2>
 
                 <p>
                     The original goal was to create a reliable way to display
-                    scrambles. During development, the project grew into
-                    something more general: a digital Rubik's Cube that can
-                    be represented, manipulated, and analyzed by other
-                    applications.
+                    scrambles for Pro Timer. During development, the project
+                    grew into something more general: a digital Rubik's Cube
+                    that can be represented, manipulated, and analyzed by
+                    other applications.
                 </p>
 
                 <p>
-                    Cubisz is currently used by Pro Timer for scramble
-                    visualization, move-count and solution checking, TPS
-                    calculation, and FMC functionality.
+                    Pro Timer still uses that first version of Cubisz for
+                    scramble visualization, move-count and solution checking,
+                    TPS calculation, and FMC functionality.
+                </p>
+
+                <p>
+                    I then rebuilt Cubisz as a solve review app on top of
+                    <a href="https://github.com/Cubing-Way/puzzly">Puzzly</a>,
+                    a cube engine I built, which does the solving, the
+                    scrambles, and the fingertrick suggestions.
                 </p>
 
                 <h2>Current Features</h2>
 
                 <ul>
-                    <li>2×2 cube simulation and visualization</li>
-                    <li>3×3 cube simulation and visualization</li>
-                    <li>2D cube planification</li>
-                    <li>3D cube visualization</li>
-                    <li>Cube movement and sticker state management</li>
-                    <li>Move-count and solution checking</li>
-                    <li>TPS calculation support</li>
-                    <li>Reusable functions for other projects</li>
+                    <li>3D cube or flat net that plays your solution, split into the method's steps as you type</li>
+                    <li>Step-by-step review against the engine's choice from the same cube</li>
+                    <li>A suggested fingertrick for every move</li>
+                    <li>Comparing, racing, or branching off the engine's own solve</li>
+                    <li>Step solver from any point of your solution</li>
+                    <li>2×2 viewer</li>
                 </ul>
 
                 <h2>Development</h2>
@@ -180,18 +187,18 @@
                     actual state of the cube.
                 </p>
 
+                <p>
+                    Rebuilding it as a review app meant connecting it to
+                    Puzzly. The heavy solving now runs on a server, so the
+                    page doesn't have to build large tables in the browser.
+                </p>
+
                 <h2>Current Status</h2>
 
                 <p>
-                    Cubisz currently supports 2×2 and 3×3 cubes and can
-                    display them as a 2D planification or as a 3D
-                    representation.
-                </p>
-
-                <p>
-                    Scramble generation is not implemented yet, but the
-                    simulation and visualization foundation is already
-                    available for future applications.
+                    Cubisz works as a solve review app for the 3×3, with a
+                    2×2 viewer. Its solving runs on Puzzly's server, and
+                    falls back to the browser when the server can't answer.
                 </p>
 
                 <p>
@@ -201,7 +208,12 @@
                     </a>
                 </p>
 
-                <p>App: None yet</p>
+                <p>
+                    App:
+                    <a href="https://cubing-way.github.io/cubisz/">
+                        Open Cubisz
+                    </a>
+                </p>
 
             </div>
 
@@ -288,7 +300,12 @@
                     </a>
                 </p>
 
-                <p>App: None yet</p>
+                <p>
+                    App:
+                    <a href="https://cubing-way.github.io/Easy-Score/">
+                        Open Easy Score
+                    </a>
+                </p>
 
             </div>
 
@@ -336,19 +353,21 @@
                 <h2>Current Features</h2>
 
                 <ul>
-                    <li>Mixed-unit input</li>
-                    <li>Mixed-unit output</li>
-                    <li>Hours, minutes, and seconds calculated together</li>
-                    <li>Automatic conversion between units</li>
+                    <li>Mixed-unit input and output, like 1 h 30 min + 45 min = 2 h 15 min</li>
+                    <li>25 kinds of quantity and about 240 units: time, length, mass, area, volume, speed, temperature, money, data, and more</li>
+                    <li>Every answer also shown in the other units of its kind</li>
+                    <li>Scientific functions: powers, roots, logarithms, trigonometry, factorials, and constants</li>
+                    <li>Exact answers, worked out as fractions</li>
+                    <li>Daily exchange rates for 31 currencies, plus bitcoin and ether</li>
                 </ul>
 
                 <h2>Current Status</h2>
 
                 <p>
-                    The project is currently an early proof of concept.
-                    The existing prototype demonstrates the core idea by
-                    allowing hours, minutes, and seconds to be entered and
-                    calculated together.
+                    The project started as a proof of concept for hours,
+                    minutes, and seconds, and was later rewritten into a
+                    full mixed-units calculator. It works offline, except
+                    for downloading exchange rates.
                 </p>
 
                 <p>
@@ -449,15 +468,15 @@
 
                 <p>
                     GitHub:
-                    <a href="#">
-                        Coming soon
+                    <a href="https://github.com/Cubing-Way/15-puzzle">
+                        15-Puzzle Simulator on GitHub
                     </a>
                 </p>
 
                 <p>
                     App:
-                    <a>
-                        Coming soon
+                    <a href="https://cubing-way.github.io/15-puzzle/">
+                        Open 15-Puzzle Simulator
                     </a>
                 </p>
 

@@ -138,39 +138,48 @@
             >
 
             <p>
-                Cubisz é uma biblioteca de simulação e visualização
-                do Cubo Mágico, criada originalmente para fornecer uma
-                visualização melhor de scrambles para o Pro Timer.
+                Cubisz é um aplicativo de revisão de resoluções do Cubo
+                Mágico. Você cola um embaralhamento e a sua solução, e
+                ele reproduz a resolução em um cubo 3D, compara cada etapa
+                com o que um motor faria a partir da mesma posição e
+                sugere um fingertrick para cada movimento.
             </p>
 
             <h2>A Ideia</h2>
 
             <p>
                 O objetivo inicial era criar uma forma confiável de
-                exibir scrambles. Durante o desenvolvimento, o projeto
-                evoluiu para algo mais amplo: um Cubo Mágico digital
-                que pode ser representado, manipulado e analisado por
-                outras aplicações.
+                exibir scrambles para o Pro Timer. Durante o
+                desenvolvimento, o projeto evoluiu para algo mais amplo:
+                um Cubo Mágico digital que pode ser representado,
+                manipulado e analisado por outras aplicações.
             </p>
 
             <p>
-                Atualmente, o Cubisz é utilizado pelo Pro Timer para
+                O Pro Timer ainda usa essa primeira versão do Cubisz para
                 visualização de scrambles, contagem de movimentos e
                 verificação de soluções, cálculo de TPS e funcionalidades
                 de FMC.
             </p>
 
+            <p>
+                Depois, reconstruí o Cubisz como um aplicativo de revisão
+                de resoluções sobre o
+                <a href="https://github.com/Cubing-Way/puzzly">Puzzly</a>,
+                um motor de cubo que desenvolvi, responsável pelas
+                soluções, pelos embaralhamentos e pelas sugestões de
+                fingertricks.
+            </p>
+
             <h2>Funcionalidades Atuais</h2>
 
             <ul>
-                <li>Simulação e visualização de cubos 2×2</li>
-                <li>Simulação e visualização de cubos 3×3</li>
-                <li>Planificação 2D do cubo</li>
-                <li>Visualização 3D do cubo</li>
-                <li>Movimentação do cubo e gerenciamento do estado das peças</li>
-                <li>Contagem de movimentos e verificação de soluções</li>
-                <li>Suporte para cálculo de TPS</li>
-                <li>Funções reutilizáveis para outros projetos</li>
+                <li>Cubo 3D ou planificação que reproduz sua solução, dividida nas etapas do método enquanto você digita</li>
+                <li>Revisão etapa por etapa comparada com a escolha do motor a partir do mesmo cubo</li>
+                <li>Sugestão de fingertrick para cada movimento</li>
+                <li>Comparar, competir ou seguir outro caminho a partir da resolução do próprio motor</li>
+                <li>Resolvedor de etapas a partir de qualquer ponto da sua solução</li>
+                <li>Visualizador de 2×2</li>
             </ul>
 
             <h2>Desenvolvimento</h2>
@@ -181,18 +190,20 @@
                 preservando ao mesmo tempo o estado real do cubo.
             </p>
 
+            <p>
+                Reconstruí-lo como aplicativo de revisão exigiu conectá-lo
+                ao Puzzly. As soluções mais pesadas agora rodam em um
+                servidor, então a página não precisa montar tabelas
+                grandes no navegador.
+            </p>
+
             <h2>Estado Atual</h2>
 
             <p>
-                Atualmente, o Cubisz suporta cubos 2×2 e 3×3 e pode
-                exibi-los como uma planificação 2D ou como uma
-                representação 3D.
-            </p>
-
-            <p>
-                A geração de embaralhamentos ainda não foi implementada,
-                mas a base de simulação e visualização já está disponível
-                para futuras aplicações.
+                Atualmente, o Cubisz funciona como aplicativo de revisão
+                de resoluções para o 3×3, com um visualizador de 2×2. As
+                soluções rodam no servidor do Puzzly e, quando o servidor
+                não responde, são calculadas no próprio navegador.
             </p>
 
             <p>
@@ -349,19 +360,21 @@
             <h2>Funcionalidades Atuais</h2>
 
             <ul>
-                <li>Entrada de unidades mistas</li>
-                <li>Saída em unidades mistas</li>
-                <li>Cálculos com horas, minutos e segundos juntos</li>
-                <li>Conversão automática entre unidades</li>
+                <li>Entrada e saída em unidades mistas, como 1 h 30 min + 45 min = 2 h 15 min</li>
+                <li>25 tipos de grandeza e cerca de 240 unidades: tempo, comprimento, massa, área, volume, velocidade, temperatura, dinheiro, dados e mais</li>
+                <li>Cada resultado também exibido nas outras unidades do mesmo tipo</li>
+                <li>Funções científicas: potências, raízes, logaritmos, trigonometria, fatoriais e constantes</li>
+                <li>Resultados exatos, calculados como frações</li>
+                <li>Cotações diárias de 31 moedas, além de bitcoin e ether</li>
             </ul>
 
             <h2>Estado Atual</h2>
 
             <p>
-                O projeto ainda está em uma fase inicial de prova de
-                conceito. O protótipo atual demonstra a ideia principal
-                permitindo inserir e calcular horas, minutos e segundos
-                juntos.
+                O projeto começou como uma prova de conceito para horas,
+                minutos e segundos e depois foi reescrito como uma
+                calculadora completa de unidades mistas. Funciona offline,
+                exceto para baixar as cotações das moedas.
             </p>
 
             <p>
